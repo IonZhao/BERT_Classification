@@ -1,16 +1,19 @@
 # BERT_Classification
 
-Model Comparison
-Model	Precision	Recall	F1 Score
-Naive Bayes by Hand	1.00	0.69	0.82
-Tf-idf by Hand	1.00	0.88	0.93
-Scikit-learn Naive Bayes	1.00	0.66	0.79
-Scikit-learn Tf-idf	1.00	0.76	0.87
-Word-level TF-IDF	1.00	0.76	0.87
-Character-level TF-IDF	1.00	0.82	0.90
-Finetuned BERT	0.95	0.90	0.92
+### 1.0 Model Comparison
+
+| Model                    | Precision | Recall | F1 Score |
+| ------------------------ | --------- | ------ | -------- |
+| Naive Bayes by Hand      | 1.00      | 0.69   | 0.82     |
+| Tf-idf by Hand           | 1.00      | 0.88   | 0.93     |
+| Scikit-learn Naive Bayes | 1.00      | 0.66   | 0.79     |
+| Scikit-learn Tf-idf      | 1.00      | 0.76   | 0.87     |
+| Word-level TF-IDF        | 1.00      | 0.76   | 0.87     |
+| Character-level TF-IDF   | 1.00      | 0.82   | 0.90     |
+| Finetuned BERT           | 0.95      | 0.90   | 0.92     |
 
 ### 1.1 Naive Bayes by Hand
+
 The high precision indicates that the model classifies spam messages very accurately, but the low recall shows it misses a significant number of spam messages. This is typical for Naive Bayes when token probabilities fail to capture nuances in text data.
 
 ### 1.2 Tf-idf by Hand
@@ -38,5 +41,4 @@ Character-level TF-IDF performs better than word-level TF-IDF, especially for no
 BERT demonstrates the highest F1 score, reflecting its superior ability to understand context and nuances in text.
 Naive Bayes (both manual and Scikit-learn) struggles with recall, which makes it less robust for detecting spam compared to other methods.
 Tf-idf (by hand and Scikit-learn) bridges the gap between Naive Bayes and BERT, providing high precision and significantly improved recall.
-
 
